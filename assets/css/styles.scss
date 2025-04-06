@@ -1,1 +1,17 @@
 @import './resets';
+@import './variables';
+@import './mixins';
+
+body{
+    font-family: "Poppins", sans-serif;
+    @include flexCenter(row);
+    width: 100vw;
+    font-size: 15px;
+}
+
+.header{
+    text-align: center;
+    &__title {
+        font-weight: weight(light);
+    }
+}

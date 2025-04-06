@@ -1,0 +1,22 @@
+@function weight($weight-name){
+    @return map-get($font-weights, $weight-name );
+}
+
+@mixin flexCenter($direction){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin border-radius($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin mobile{
+    @media (max-width:768px) {
+        @content;        
+    }
+}

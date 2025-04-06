@@ -5,4 +5,21 @@
 * {
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100vw;
+  font-size: 15px;
+}
+
+.header {
+  text-align: center;
+}
+.header__title {
+  font-weight: 200;
 }/*# sourceMappingURL=styles.css.map */
