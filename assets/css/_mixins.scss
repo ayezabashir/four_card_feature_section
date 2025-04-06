@@ -1,22 +1,23 @@
-@function weight($weight-name){
-    @return map-get($font-weights, $weight-name );
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
 }
 
-@mixin flexCenter($direction){
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: $direction;
+@mixin border-color($card-colours) {
+  content: "";
+  display: block;
+  height: 5px;
+  background-color: $card-colours;
 }
 
-@mixin border-radius($radius){
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    border-radius: $radius;
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
 }
 
-@mixin mobile{
-    @media (max-width:768px) {
-        @content;        
-    }
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
 }

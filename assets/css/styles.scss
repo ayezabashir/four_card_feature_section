@@ -4,14 +4,84 @@
 
 body{
     font-family: "Poppins", sans-serif;
-    @include flexCenter(row);
     width: 100vw;
     font-size: 15px;
+    padding: 3rem;
+}
+
+article{
+    margin-top: 5rem;
 }
 
 .header{
+    margin: 0 auto;
+    max-width: 540px;
     text-align: center;
+    color: $grey-500;
     &__title {
         font-weight: weight(light);
+        font-size: 36px;
+    }
+    &__subtitle{
+        font-weight: weight(bold);
+        font-size: 36px;
+        margin-bottom: 1rem;
+    }
+    &__desc{
+        font-weight: weight(regular);
+    }
+}
+
+.cards{
+    margin: 5rem auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, auto);
+    min-width: 900px;
+    &__card{
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 6px 28px -10px #a3bfc7;
+        &--green{
+            &::before {
+                @include border-color($cyan);
+              }
+        }
+        &--red{
+            &::before {
+                @include border-color($red);
+              }
+        }
+        &--yellow{
+            &::before {
+                @include border-color($orange);
+              }
+        }
+        &--blue{
+            &::before {
+                @include border-color($blue);
+              }
+        }
+        &__title{
+            color: $grey-500;
+            margin-bottom: 0.5rem;
+            font-size: 20px;
+        }
+        &__desc{
+            color: $grey-400;
+            margin-bottom: 2rem;
+        }
+    }
+    &__content{
+        padding: 2rem;
+        padding-bottom: 0;
+    }
+    &__icon{
+        text-align: right;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+        img{
+            width: 60px;
+        }
     }
 }
