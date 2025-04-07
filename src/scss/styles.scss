@@ -1,0 +1,15 @@
+@import "./resets";
+@import "./variables";
+@import "./mixins";
+@import "./component";
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  font-size: 15px;
+  padding: 3rem;
+}
+
+article {
+  margin-top: 5rem;
+}
