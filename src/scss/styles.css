@@ -100,6 +100,18 @@
   width: 60px;
 }
 
+@media (max-width: 768px) {
+  .header__title, .header__subtitle {
+    font-size: 26px;
+  }
+  .cards {
+    display: block;
+    min-width: initial;
+  }
+  .cards__card {
+    margin-bottom: 2rem;
+  }
+}
 body {
   font-family: "Poppins", sans-serif;
   width: 100vw;
@@ -109,4 +121,10 @@ body {
 
 article {
   margin-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 2.5rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

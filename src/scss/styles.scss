@@ -13,3 +13,9 @@ body {
 article {
   margin-top: 5rem;
 }
+
+@include mobile{
+  body{
+    padding: 2.5rem;
+  }
+}

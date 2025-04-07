@@ -1,82 +1,95 @@
-
 .header {
-    margin: 0 auto;
-    max-width: 540px;
-    text-align: center;
-    color: $grey-500;
-    &__title {
-      font-weight: weight(light);
-      font-size: 36px;
+  margin: 0 auto;
+  max-width: 540px;
+  text-align: center;
+  color: $grey-500;
+  &__title {
+    font-weight: weight(light);
+    font-size: 36px;
+  }
+  &__subtitle {
+    font-weight: weight(bold);
+    font-size: 36px;
+    margin-bottom: 1rem;
+  }
+  &__desc {
+    font-weight: weight(regular);
+  }
+}
+
+.cards {
+  margin: 5rem auto;
+  display: grid;
+  justify-content: center;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 350px);
+  grid-template-rows: repeat(4, 120px);
+  min-width: 900px;
+  &__card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 6px 28px -10px #a3bfc7;
+    &--green {
+      grid-row: 2 / 4;
+      &::before {
+        @include border-color($cyan);
+      }
     }
-    &__subtitle {
-      font-weight: weight(bold);
-      font-size: 36px;
-      margin-bottom: 1rem;
+    &--red {
+      grid-row: 1 / 3;
+      grid-column: 2;
+      &::before {
+        @include border-color($red);
+      }
+    }
+    &--yellow {
+      grid-row: 3 / 5;
+      grid-column: 2;
+      &::before {
+        @include border-color($orange);
+      }
+    }
+    &--blue {
+      grid-row: 2 / 4;
+      grid-column: 3;
+      &::before {
+        @include border-color($blue);
+      }
+    }
+    &__title {
+      color: $grey-500;
+      margin-bottom: 0.5rem;
+      font-size: 20px;
     }
     &__desc {
-      font-weight: weight(regular);
+      color: $grey-400;
+      margin-bottom: 2rem;
     }
   }
-  
-  .cards {
-    margin: 5rem auto;
-    display: grid;
-    justify-content: center;
-    gap: 1.5rem;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(4, 120px);
-    min-width: 900px;
-    &__card {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0px 6px 28px -10px #a3bfc7;
-      &--green {
-        grid-row: 2 / 4;
-        &::before {
-          @include border-color($cyan);
-        }
-      }
-      &--red {
-        grid-row: 1 / 3;
-        grid-column: 2;
-        &::before {
-          @include border-color($red);
-        }
-      }
-      &--yellow {
-        grid-row: 3 / 5;
-        grid-column: 2;
-        &::before {
-          @include border-color($orange);
-        }
-      }
-      &--blue {
-        grid-row: 2 / 4;
-        grid-column: 3;
-        &::before {
-          @include border-color($blue);
-        }
-      }
-      &__title {
-        color: $grey-500;
-        margin-bottom: 0.5rem;
-        font-size: 20px;
-      }
-      &__desc {
-        color: $grey-400;
-        margin-bottom: 2rem;
-      }
-    }
-    &__content {
-      padding: 2rem 1.5rem;
-      padding-bottom: 0;
-    }
-    &__icon {
-      text-align: right;
-      padding-right: 1.5rem;
-      img {
-        width: 60px;
-      }
+  &__content {
+    padding: 2rem 1.5rem;
+    padding-bottom: 0;
+  }
+  &__icon {
+    text-align: right;
+    padding-right: 1.5rem;
+    img {
+      width: 60px;
     }
   }
-  
+}
+
+@include mobile{
+  .header{
+    &__title, &__subtitle  {
+      font-size: 26px;
+    }
+  }
+  .cards{
+    display: block;
+    min-width: initial;
+    &__card{
+      margin-bottom: 2rem;
+    }
+  }
+}
