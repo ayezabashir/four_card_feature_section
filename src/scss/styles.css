@@ -27,7 +27,7 @@
 }
 
 .cards {
-  margin: 5rem auto;
+  margin: 4.5rem auto;
   display: grid;
   justify-content: center;
   gap: 1.5rem;
@@ -120,7 +120,7 @@ body {
 }
 
 article {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 @media (max-width: 768px) {
