@@ -104,6 +104,8 @@
   .header__title, .header__subtitle {
     font-size: 26px;
   }
+}
+@media (max-width: 1024px) {
   .cards {
     display: block;
     min-width: initial;

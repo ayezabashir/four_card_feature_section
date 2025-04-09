@@ -85,6 +85,9 @@
       font-size: 26px;
     }
   }
+}
+
+@include tablet{
   .cards{
     display: block;
     min-width: initial;
